@@ -37,3 +37,7 @@ jobs:
         password: $CF_PASSWORD
         organization: $CF_ORG
         space: $CF_SPACE
+  jdk: openjdk11
+  install: skip
+  before_script: chmod 777 gradlew
+  script: ./gradlew clean build
